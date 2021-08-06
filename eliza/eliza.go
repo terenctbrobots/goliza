@@ -23,8 +23,8 @@ func preprocess(statement string) string {
 	return statement
 }
 
-func CompareStatement(statement string, compareArray []string, preprocess bool) bool {
-	if preprocess {
+func CompareStatement(statement string, compareArray []string, preprocessStatment bool) bool {
+	if preprocessStatment {
 		statement = preprocess(statement)
 	}
 
