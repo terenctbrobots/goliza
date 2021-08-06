@@ -2,6 +2,7 @@ package eliza
 
 import (
 	"fmt"
+	"math/rand"
 	"regexp"
 	"strings"
 )
@@ -10,11 +11,11 @@ func init() {
 }
 
 func Greetings() string {
-	return "Hello, Apa Khabar"
+	return randChoice(Introductions)
 }
 
 func Goodbye() string {
-	return "Selamat Tinggal"
+	return randChoice(Goodbyes)
 }
 
 func preprocess(statement string) string {
@@ -72,7 +73,12 @@ func ReplyTo(statement string) string {
 		}
 	}
 
-	return ""
+	return randChoice(DefaultResponses)
+}
+
+func randChoice(list []string) string {
+	randIndex := rand.Intn(len(list))
+	return list[randIndex]
 }
 
 func reflect(fragment string) string {

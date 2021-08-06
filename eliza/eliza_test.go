@@ -25,9 +25,9 @@ func TestGoodbye(t *testing.T) {
 }
 
 func TestReplyTo(t *testing.T) {
-	reply := ReplyTo("i need help")
+	reply := ReplyTo("Saya mahu ketolongan")
 
-	if reply != "Why do you need help?" {
+	if reply != "Kenapa awak mahu ketolongan?" {
 		t.Errorf("ReplyTo() = %s", reply)
 	}
 }

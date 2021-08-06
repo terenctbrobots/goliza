@@ -1,7 +1,7 @@
 package eliza
 
 var Introductions = []string{
-	"Hello, Apa Khabar",
+	"Apa Khabar",
 	"Selamat Datang",
 }
 
@@ -11,11 +11,24 @@ var Goodbyes = []string{
 }
 
 var Psychobabble = map[string][]string{
-	`i need (.*)`: {
-		"Why do you need %s?",
-		"Would it really help you to get %s?",
-		"Are you sure you need %s?",
+	`saya mahu (.*)`: {
+		"Kenapa awak mahu %s?",
+		"Adakah ia benar-benar membantu anda untuk mendapatkan %s?",
+		"Adakah anda pasti memerlukan %s?",
 	},
+}
+
+// If ELIZA doesn't understand the question, then it will reply with one of
+// these default responses
+var DefaultResponses = []string{
+	"Bagi beritahu saya lagi.",
+	"Mari ubah fokus sedikit... Beritahu saya tentang keluarga anda.",
+	"Bolehkah anda menghuraikannya?",
+	"Saya faham.",
+	"Sugguh menarik.",
+	"Saya faham. Dan apa yang memberitahu anda?",
+	"Bgaimana itu membuat anda merasa?",
+	"Bagaimana perasaan anda apabila mengatakannya",
 }
 
 // This is a table to reflect words in question fragments inside the response.
