@@ -81,6 +81,9 @@ func randChoice(list []string) string {
 	return list[randIndex]
 }
 
+// Malay has word pairs that are reflected so
+// need to cater for that as well. It has priority of
+// singular for example: saya buny
 func reflect(fragment string) string {
 	words := strings.Split(fragment, " ")
 	for i, word := range words {
