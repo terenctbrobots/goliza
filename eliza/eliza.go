@@ -42,7 +42,7 @@ func ReplyTo(statement string) string {
 	statement = preprocess(statement)
 
 	for pattern, responses := range Psychobabble {
-		fmt.Printf("Pattern %s\n", pattern)
+		fmt.Printf("Pattern %s 1\n", pattern)
 		// Compile pattern and return regex to use
 		re := regexp.MustCompile(pattern)
 		// Find a match return match and capture
