@@ -48,5 +48,5 @@ var ReflectedWords = map[string]string{
 	"your":   "my",
 	"yours":  "mine",
 	"you":    "me",
-	"me":     "you",
+	"saya":   "awak",
 }
