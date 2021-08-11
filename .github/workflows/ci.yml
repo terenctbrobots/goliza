@@ -37,13 +37,14 @@ jobs:
       # Build it
       - name: Build
         run: go build -v ./...
-        
+       
+      # Run tests here!
       # Build Docker image
-      - name: Build Docker image
-        uses: docker/build-push-action@v2
-        with:
-          push: false
-          tags: ${{ github.event.repository.name }}:latest, ${{ github.repository }}:latest
+      #- name: Build Docker image
+      #  uses: docker/build-push-action@v2
+      #  with:
+      #    push: false
+      #    tags: ${{ github.event.repository.name }}:latest, ${{ github.repository }}:latest
 
       # Runs a single command using the runners shell
       #- name: Run a one-line script
